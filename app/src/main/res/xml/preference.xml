@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefs"
+    android:title="@string/app_name">
+
+    <PreferenceCategory android:title="Mise à jour"
+        android:key="miseajour"
+        android:layout="@xml/preference_category">
+
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Section importante"
+        android:layout="@xml/preference_category"
+        android:key="sectionimpo">
+
+        <EditTextPreference
+            android:defaultValue="10"
+            android:numeric="integer"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_box_preference_1"
+            android:title="Check box preference" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:title="Switch preference"
+            android:dependency="check_box_preference_1"/>
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/listMaudie"
+            android:entryValues="@array/listMaudie"
+            android:key="list_preference_1"
+            android:title="List preference" />
+        <MultiSelectListPreference
+            android:defaultValue="@array/listMaudie"
+            android:entries="@array/listMaudie"
+            android:entryValues="@array/listMaudie"
+            android:key="multi_select_list_preference_1"
+            android:title="Multi select list preference" />
+    </PreferenceCategory>
+</PreferenceScreen>

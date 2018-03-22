@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Settings</string>
+    <string-array name="listMaudie">
+        <item>allo</item>
+        <item>bonjour</item>
+        <item>hola</item>
+    </string-array>
+</resources>
